@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPPD SMP</title>
+    <!-- Menambahkan favicon opsional, bisa diganti dengan URL logo instansi jika ada -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="> 
+    <style>
+        /* Reset margin & padding agar full screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Mencegah scroll ganda dari body */
+            background-color: #f8fafc; /* Warna background netral */
+            font-family: sans-serif;
+        }
+
+        /* Container untuk membungkus iframe dan menyembunyikan bagian atasnya */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Iframe ditarik ke atas menggunakan margin negatif untuk menyembunyikan banner GAS */
+        .iframe-container iframe {
+            position: absolute;
+            top: -6px; /* Sesuaikan nilai ini jika banner masih sedikit terlihat atau terlalu terpotong (biasanya antara -36px sampai -45px) */
+            left: 0;
+            width: 100%;
+            height: calc(100% + 6px); /* Mengkompensasi tinggi yang hilang di atas agar bawahnya tidak terpotong */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="iframe-container">
+        <!-- Link Web App Google Apps Script -->
+        <iframe 
+            src="https://script.google.com/macros/s/AKfycbwo6JNMNhoVqRGMHg5hUtp4B1X9_Jj0DGjFt3kYFWKmJjpQs7FgyH4gjvAZ9z9tIZ7A4Q/exec" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</body>
+</html>
